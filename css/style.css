@@ -1,0 +1,244 @@
+* {
+    margin:0;
+    padding:0;
+    list-style:none;
+    vertical-align:baseline;
+}
+
+body {
+    background-color: #00647e;
+    transition: background 1s ease;
+}
+
+/* Cores padrão
+    AZUL #00A0B0
+    MARROM #6A4A3C
+    VERMELHO #CC333F
+    LARANJA #EB6841
+    AMARELO #EDC951
+    
+    Link das cores - Ocean Five
+    http://www.colourlovers.com/palette/1473/Ocean_Five
+
+*/
+
+.introLogo {
+    position: absolute;
+    background: url(../img/thiagohille.png) no-repeat;
+    width: 993px;
+    height: 1121px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform: translate(0) scale(.2);
+    z-index: 0;
+}
+.introLogo.intro {
+    position: absolute;
+    background: url(../img/thiagohille.png) no-repeat;
+    width: 993px;
+    height: 1121px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform: translate(0) scale(.2);
+    z-index: 0;
+    animation: anIntro 1.5s ease both;
+}
+#menu {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+}
+#menu li {
+    border-radius: 5px;
+    position: absolute;
+    width: 10px;
+    font-size: 0px;
+    color: transparent;
+    height: 100px;
+    padding: 25px 15px;
+    font-weight: 100;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+#menu li.zoomItemE {
+    animation: anZoomItemE 1s ease both;
+}
+#menu li.zoomItemD {
+    animation: anZoomItemD 1s ease both;
+}
+#menu li.intro:first-child {
+    animation: anIntroMenu 1s ease both;
+    animation-delay: 0s;
+}
+#menu li.intro:nth-child(2) {
+    animation: anIntroMenu 1s ease both;
+    animation-delay: .2s;
+}
+#menu li.intro:nth-child(3) {
+    animation: anIntroMenu 1s ease both;
+    animation-delay: .4s;
+}
+#menu li.intro:nth-child(4) {
+    animation: anIntroMenu 1s ease both;
+    animation-delay: .6s;
+}
+#menu li.intro:nth-child(5) {
+    animation: anIntroMenu 1s ease both;
+    animation-delay: .8s;
+}
+#menu li:hover {
+    position: absolute;
+    width: 200px;
+    font-size: 2em;
+    padding: 25px 20px;
+}
+#menu li:first-child {
+    background: #00A0B0;
+    color: #b4f8ff;
+    text-align: right;
+    border-left: 1px solid #028795;
+    transform-origin: right center;
+    transform: translate(-178px,-15px) rotate(60deg);
+    right: 0px;
+}
+#menu li:nth-child(2) {
+    background: #6A4A3C;
+    color: #e3ad95;
+    text-align: left;
+    transform-origin: left center;
+    transform: translate(178px,-15px) rotate(-60deg);
+    left: 0px;
+}
+#menu li:nth-child(3) {
+    background: #CC333F;
+    color: #f8b9be;
+    text-align: right;
+    transform-origin: right center;
+    transform: translate(-230px,75px) rotate(0deg);
+    right: 0px;
+}
+#menu li:nth-child(4) {
+    background: #EB6841;
+    color: #ffcbbb;
+    text-align: left;
+    transform-origin: left center;
+    transform: translate(230px,75px) rotate(0deg);
+    left: 0px;
+}
+#menu li:nth-child(5) {
+    background: #EDC951;
+    color: #fff7df;
+    transform-origin: left center;
+    transform: translate(180px,165px) rotate(60deg);
+    left: 0px;
+}
+
+@keyframes anMenu {
+    0% {
+        width: 10px;
+        font-size: 0em;
+    }
+    30% {
+        width: 250px;
+        font-size: 0em;
+    }
+    100% {
+        width: 200px;
+        font-size: 2em;
+    }
+}
+@keyframes anIntro {
+    0% {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+        transform: translate(0) scale(2) rotate(10deg);
+        opacity: 0;
+    }
+    30% {
+        transform: translate(0) scale(.1) rotate(-10deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0) scale(.2);
+    }
+}
+@keyframes anIntroMenu {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+        transform: scale(.1) rotate(1550deg) translate(9000px,0);
+    }
+    100% {
+        height: 100px;
+    }
+}
+@keyframes anZoomItemD {
+    10% {
+        color: rgba(255, 255, 255, 0);
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        transform: translate(-1200px,0) scale(11) rotate(360deg);
+        color: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes anZoomItemE {
+    10% {
+        color: rgba(255, 255, 255, 0);
+        transform: rotate(0deg);
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        transform: translate(1200px,0) scale(11);
+        color: rgba(255, 255, 255, 0);
+    }
+}
+
+section#thiagohille {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5%;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+}
+section#thiagohille .foto {
+    background: url(../img/foto_thiagoHille.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+}
+section#thiagohille h1 {
+    font-size: 5em;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    letter-spacing: .2em;
+}
+section#thiagohille p {
+    font-size: 1.1em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    letter-spacing: .1em;
+}
+
